@@ -7,7 +7,7 @@ import com.svalero.splashscreen_26_oct_o.movies.lstMovies.view.LstMoviesActivity
 
 import java.util.ArrayList;
 
-public class LstMoviesPresenter {
+public class LstMoviesPresenter implements LstMoviesContract.Presenter{
 
     private LstMoviesModel lstMoviesModel;
     private LstMoviesActivity lstMoviesActivity;

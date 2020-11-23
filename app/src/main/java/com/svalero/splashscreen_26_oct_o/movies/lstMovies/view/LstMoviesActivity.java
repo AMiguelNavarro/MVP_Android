@@ -7,11 +7,12 @@ import android.widget.Toast;
 
 import com.svalero.splashscreen_26_oct_o.R;
 import com.svalero.splashscreen_26_oct_o.beans.Movie;
+import com.svalero.splashscreen_26_oct_o.movies.lstMovies.contract.LstMoviesContract;
 import com.svalero.splashscreen_26_oct_o.movies.lstMovies.presenter.LstMoviesPresenter;
 
 import java.util.ArrayList;
 
-public class LstMoviesActivity extends AppCompatActivity {
+public class LstMoviesActivity extends AppCompatActivity implements LstMoviesContract.View {
 
     private LstMoviesPresenter lstMoviesPresenter;
 
@@ -33,4 +34,16 @@ public class LstMoviesActivity extends AppCompatActivity {
     public void error(String error) {
         Toast.makeText(this, error, Toast.LENGTH_SHORT).show();
     }
+
+    /* La implementacion de los métodos de Viiew del contract*/
+    @Override
+    public void succes() {
+
+    }
+
+    @Override
+    public void error() {
+
+    }
+    // Toast es un mensaje que se muestra al usuario durante un tiempo para informarle de algo
 }
